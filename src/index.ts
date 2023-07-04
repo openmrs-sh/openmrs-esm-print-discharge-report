@@ -7,7 +7,7 @@
 import { getAsyncLifecycle, defineConfigSchema } from "@openmrs/esm-framework";
 import { configSchema } from "./config-schema";
 
-const moduleName = "@openmrs/esm-template-app";
+const moduleName = "@openmrs/esm-print-discharge-report-app";
 
 const options = {
   featureName: "hello-world",
@@ -60,4 +60,12 @@ export const blueBox = getAsyncLifecycle(
 export const brandBox = getAsyncLifecycle(
   () => import("./boxes/extensions/brand-box"),
   options
+);
+
+export const printDischargeReportActionButton = getAsyncLifecycle(
+  () => import("./actions-buttons/print-discharge-report.component"),
+  {
+    featureName: "patient-actions-slot",
+    moduleName,
+  }
 );
