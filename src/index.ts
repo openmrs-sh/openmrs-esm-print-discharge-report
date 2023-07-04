@@ -9,11 +9,6 @@ import { configSchema } from "./config-schema";
 
 const moduleName = "@openmrs/esm-print-discharge-report-app";
 
-const options = {
-  featureName: "hello-world",
-  moduleName,
-};
-
 /**
  * This tells the app shell how to obtain translation files: that they
  * are JSON files in the directory `../translations` (which you should
@@ -37,35 +32,20 @@ export function startupApp() {
 }
 
 /**
- * This named export tells the app shell that the default export of `hello.tsx`
- * should be rendered when the route matches `hello`. The full route
- * will be `openmrsSpaBase() + 'hello'`, which is usually
- * `/openmrs/spa/hello`.
- */
-export const hello = getAsyncLifecycle(() => import("./hello"), options);
-
-/**
  * The following are named exports for the extensions defined in this frontend modules. See the `routes.json` file to see how these are used.
  */
-export const redBox = getAsyncLifecycle(
-  () => import("./boxes/extensions/red-box"),
-  options
-);
-
-export const blueBox = getAsyncLifecycle(
-  () => import("./boxes/extensions/blue-box"),
-  options
-);
-
-export const brandBox = getAsyncLifecycle(
-  () => import("./boxes/extensions/brand-box"),
-  options
-);
-
 export const printDischargeReportActionButton = getAsyncLifecycle(
   () => import("./actions-buttons/print-discharge-report.component"),
   {
     featureName: "patient-actions-slot",
+    moduleName,
+  }
+);
+
+export const printDischargeReportDialog = getAsyncLifecycle(
+  () => import("./visit/visit-prompt/print-discharge-report-dialog.component"),
+  {
+    featureName: "print discharge report visit",
     moduleName,
   }
 );

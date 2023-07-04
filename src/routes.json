@@ -11,6 +11,10 @@
       "slot": "patient-actions-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "print-discharge-report-dialog",
+      "component": "printDischargeReportDialog"
     }
   ]
 }
