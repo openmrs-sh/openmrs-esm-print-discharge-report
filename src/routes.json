@@ -17,14 +17,9 @@
       "component": "printDischargeReportDialog"
     },
     {
-      "name": "past-visits-detail-overview-discharge-report",
-      "slot": "patient-chart-encounters-dashboard-slot",
-      "component": "pastVisitsDetailOverview",
-      "order": 1,
-      "meta": {
-        "title": "Visits",
-        "view": "visits"
-      }
+      "name": "visit-detail-overview-action",
+      "slot": "visit-detail-overview-actions",
+      "component": "visitDetailOverviewPrintButton"
     }
   ]
 }
