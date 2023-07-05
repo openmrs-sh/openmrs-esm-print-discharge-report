@@ -15,6 +15,16 @@
     {
       "name": "print-discharge-report-dialog",
       "component": "printDischargeReportDialog"
+    },
+    {
+      "name": "past-visits-detail-overview-discharge-report",
+      "slot": "patient-chart-encounters-dashboard-slot",
+      "component": "pastVisitsDetailOverview",
+      "order": 1,
+      "meta": {
+        "title": "Visits",
+        "view": "visits"
+      }
     }
   ]
 }

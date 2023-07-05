@@ -60,7 +60,7 @@ const PrintDischargeReportDialog: React.FC<PrintDischargeReportDialogProps> = ({
             ),
             kind: "warning",
             critical: false,
-            description: "",
+            description: printReportPayload.visitUuid,
           });
         } else
           showNotification({
