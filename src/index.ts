@@ -50,8 +50,11 @@ export const printDischargeReportDialog = getAsyncLifecycle(
   }
 );
 
-export const pastVisitsDetailOverview = getAsyncLifecycle(
-  () => import("./visit/visits-widget/visit-detail-overview.component"),
+export const visitDetailOverviewPrintButton = getAsyncLifecycle(
+  () =>
+    import(
+      "./visit/visits-widget/visit-detail-overview-print-button.component"
+    ),
   {
     featureName: "visits-detail-slot",
     moduleName,
