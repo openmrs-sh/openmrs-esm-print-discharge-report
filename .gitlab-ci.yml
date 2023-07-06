@@ -5,12 +5,16 @@ stages:
 
 build:
   stage: build
+  tags:
+    - openmrs
   script:
     - yarn install --immutable
     - yarn verify
     - yarn build
 release:
   stage: deploy
+  tags:
+    - openmrs
   script:
     - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">.npmrc
     - yarn install --immutable
