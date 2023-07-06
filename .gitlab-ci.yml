@@ -4,6 +4,7 @@ stages:
   - deploy
 
 build:
+  image: node:18-alpine
   stage: build
   tags:
     - openmrs
@@ -13,6 +14,7 @@ build:
     - yarn verify
     - yarn build
 release:
+  image: node:18-alpine
   stage: deploy
   tags:
     - openmrs
