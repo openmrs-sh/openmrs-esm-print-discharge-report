@@ -7,7 +7,7 @@
 import { getAsyncLifecycle, defineConfigSchema } from "@openmrs/esm-framework";
 import { configSchema } from "./config-schema";
 
-const moduleName = "@openmrs/esm-print-discharge-report-app";
+const moduleName = "@simc/esm-print-discharge-report-app";
 
 /**
  * This tells the app shell how to obtain translation files: that they

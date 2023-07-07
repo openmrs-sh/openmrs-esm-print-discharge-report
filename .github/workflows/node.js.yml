@@ -10,8 +10,8 @@ on:
       - created
 
 env:
-  ESM_NAME: "@openmrs/esm-print-discharge-report-app"
-  JS_NAME: "openmrs-esm-print-discharge-report-app.js"
+  ESM_NAME: "@simc/esm-print-discharge-report-app"
+  JS_NAME: "simc-esm-print-discharge-report-app.js"
 
 jobs:
   build:
