@@ -49,6 +49,7 @@ const PrintDischargeReportDialog: React.FC<PrintDischargeReportDialogProps> = ({
       (response) => {
         if (response.status === 200) {
           response.blob().then((blob) => showInOtherTab(blob));
+          closeModal();
         }
       },
       (error) => {
@@ -62,6 +63,7 @@ const PrintDischargeReportDialog: React.FC<PrintDischargeReportDialogProps> = ({
             critical: false,
             description: printReportPayload.visitUuid,
           });
+          closeModal();
         } else
           showNotification({
             title: t(

@@ -1,4 +1,5 @@
 {
+  "admissionId": "מזהה כניסה",
   "cancel": "ביטול",
   "printDischargeReport": "הדפס דוח שחרור",
   "printDischargeReportError": "שגיאה בהדפסת דוח שחרור",

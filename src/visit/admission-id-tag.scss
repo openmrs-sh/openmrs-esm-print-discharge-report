@@ -1,0 +1,38 @@
+.tooltipPadding {
+  padding: 0.25rem;
+}
+
+.tooltipSmallText {
+  font-size: 80%;
+}
+
+.heading {
+  margin-bottom: 0.5rem; 
+}
+
+.definitionToolTip {
+  & > button{
+    border-bottom: none;
+  }
+
+  .admissionTag {
+    display: flex;
+    align-items: center;
+    margin-right: 0.75rem;
+    .admissionValue {
+      color: gray;
+    }
+  }
+}
+
+html[dir='rtl'] {
+  .definitionToolTip {
+    .admissionTag {
+      margin-right: unset;
+      margin-left: 0.75rem;
+      .admissionValue {
+        color: gray;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "admissionId": "Admission Id {admissionId}",
+  "admissionId": "Admission ID",
   "cancel": "Cancel",
   "printDischargeReport": "Print Discharge Report",
   "printDischargeReportError": "Error print discharge report",
