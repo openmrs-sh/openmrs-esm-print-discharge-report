@@ -5,5 +5,6 @@
   "printDischargeReportError": "Error print discharge report",
   "printDischargeReportErrorMessage": "There are no gastro encounters for the visit",
   "printDischargeReportWarningMessage": "You are going to download discharge report for active visit",
-  "printReport": "Print Report"
+  "printReport": "Print Report",
+  "visit": "Visit"
 }

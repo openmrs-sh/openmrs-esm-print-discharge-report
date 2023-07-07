@@ -36,7 +36,8 @@ const AdmissionIdTag: React.FC<AdmissionIdTagProps> = ({
   );
 
   return (
-    currentVisit && (
+    currentVisit &&
+    admissionValue && (
       <DefinitionTooltip
         className={styles.definitionToolTip}
         align="bottom-left"

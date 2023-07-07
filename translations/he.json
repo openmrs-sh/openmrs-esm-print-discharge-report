@@ -4,5 +4,6 @@
   "printDischargeReportError": "שגיאה בהדפסת דוח שחרור",
   "printDischargeReportErrorMessage": "אין פגישות גסטרו עבור הביקור",
   "printDischargeReportWarningMessage": "אתה הולך להוריד דוח שחרור עבור ביקור פעיל",
-  "printReport": "הדפס דוח"
+  "printReport": "הדפס דוח",
+  "visit": "ביקור"
 }

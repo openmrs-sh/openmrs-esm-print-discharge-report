@@ -18,7 +18,7 @@
     },
     {
       "name": "visit-detail-overview-action",
-      "slot": "visit-detail-overview-actions",
+      "slot": "visit-detail-overview-actions-slot",
       "component": "visitDetailOverviewPrintButton"
     },
     {
