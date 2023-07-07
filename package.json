@@ -1,5 +1,5 @@
 {
-  "name": "@openmrs/esm-print-discharge-report-app",
+  "name": "@simc/esm-print-discharge-report-app",
   "version": "3.0.0",
   "license": "MPL-2.0",
   "description": "A microfrontend print-discharge-report OpenMRS",
