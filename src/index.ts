@@ -35,7 +35,7 @@ export function startupApp() {
  * The following are named exports for the extensions defined in this frontend modules. See the `routes.json` file to see how these are used.
  */
 export const printDischargeReportActionButton = getAsyncLifecycle(
-  () => import("./actions-buttons/print-discharge-report.component"),
+  () => import("./patient-actions-buttons/print-discharge-report.component"),
   {
     featureName: "patient-actions-slot",
     moduleName,
@@ -43,7 +43,7 @@ export const printDischargeReportActionButton = getAsyncLifecycle(
 );
 
 export const printDischargeReportDialog = getAsyncLifecycle(
-  () => import("./visit/visit-prompt/print-discharge-report-dialog.component"),
+  () => import("./visit/print-discharge-report-dialog.component"),
   {
     featureName: "print discharge report visit",
     moduleName,
@@ -51,12 +51,17 @@ export const printDischargeReportDialog = getAsyncLifecycle(
 );
 
 export const visitDetailOverviewPrintButton = getAsyncLifecycle(
-  () =>
-    import(
-      "./visit/visits-widget/visit-detail-overview-print-button.component"
-    ),
+  () => import("./visit/visit-detail-overview-print-button.component"),
   {
     featureName: "visits-detail-slot",
+    moduleName,
+  }
+);
+
+export const admissionIdTag = getAsyncLifecycle(
+  () => import("./visit/admission-id-tag.component"),
+  {
+    featureName: "admission-id-tag",
     moduleName,
   }
 );

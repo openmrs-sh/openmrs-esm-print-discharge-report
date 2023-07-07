@@ -18,8 +18,13 @@
     },
     {
       "name": "visit-detail-overview-action",
-      "slot": "visit-detail-overview-actions-slot",
+      "slot": "visit-detail-overview-actions",
       "component": "visitDetailOverviewPrintButton"
+    },
+    {
+      "name": "admission-id-tag",
+      "slot": "patient-banner-tags-slot",
+      "component": "admissionIdTag"
     }
   ]
 }

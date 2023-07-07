@@ -1,6 +1,6 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { Button } from "@carbon/react";
-import { Visit, showModal } from "@openmrs/esm-framework";
+import { Visit, showModal, useConfig } from "@openmrs/esm-framework";
 import { useTranslation } from "react-i18next";
 import { Printer } from "@carbon/react/icons";
 

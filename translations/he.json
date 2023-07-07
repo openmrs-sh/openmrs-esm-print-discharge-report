@@ -1,6 +1,8 @@
 {
+  "cancel": "ביטול",
   "printDischargeReport": "הדפס דוח שחרור",
   "printDischargeReportError": "שגיאה בהדפסת דוח שחרור",
   "printDischargeReportErrorMessage": "אין פגישות גסטרו עבור הביקור",
-  "printDischargeReportWarningMessage": "אתה הולך להוריד דוח שחרור עבור ביקור פעיל"
+  "printDischargeReportWarningMessage": "אתה הולך להוריד דוח שחרור עבור ביקור פעיל",
+  "printReport": "הדפס דוח"
 }
