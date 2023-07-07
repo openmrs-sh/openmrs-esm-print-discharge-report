@@ -21,7 +21,7 @@ const AdmissionIdTag: React.FC<AdmissionIdTagProps> = ({ patientUuid }) => {
       currentVisit.attributes?.find(
         (x) => x.attributeType?.uuid == config.admissionIdVisitAttributeUuid
       )?.value,
-    [config.admissionIdVisitAttributeUuid, currentVisit.attributes]
+    [config.admissionIdVisitAttributeUuid, currentVisit]
   );
 
   const admissionDisplay = useMemo(() => t("admissionId", "Admission ID"), [t]);
