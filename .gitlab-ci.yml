@@ -7,7 +7,7 @@ build:
   image: node:18-alpine
   stage: build
   tags:
-    - k8srunner
+    - docker-runner
   script:
     - npm install --global yarn
     - yarn install --immutable
@@ -17,7 +17,7 @@ release:
   image: node:18-alpine
   stage: deploy
   tags:
-    - k8srunner
+    - docker-runner
   script:
     - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">.npmrc
     - npm install --global yarn
