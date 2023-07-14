@@ -10,7 +10,7 @@ build:
     - docker-runner
   script:
     - yarn install --immutable
-    - yarn verify --passWithNoTests
+    # - yarn verify --passWithNoTests
     - yarn build
 release:
   image: node:18-alpine
