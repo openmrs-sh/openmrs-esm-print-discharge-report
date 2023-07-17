@@ -1,7 +1,7 @@
 image: node:18-alpine
 stages:
   - build
-  - deploy
+  - pre-release
 
 build:
   image: node:18-alpine
@@ -12,11 +12,13 @@ build:
     - yarn install --immutable
     # - yarn verify --passWithNoTests
     - yarn build
-release:
+pre-release:
   image: node:18-alpine
-  stage: deploy
+  stage: pre-release
   tags:
     - docker-runner
   script:
+    - npm install -g semver
+    - npm version --no-git-tag-version  $(node -e "console.log(require('semver').inc(require('./package.json').version, 'patch'))")-pre.$CI_PIPELINE_ID
     - yarn install --immutable
-    - yarn npm publish
+    - yarn npm publish --tag next
