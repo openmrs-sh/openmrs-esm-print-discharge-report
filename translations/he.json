@@ -1,10 +1,17 @@
 {
-  "admissionId": "מזהה כניסה",
+  "admissionId": "מספר כניסה",
   "cancel": "ביטול",
-  "printDischargeReport": "הדפס דוח שחרור",
-  "printDischargeReportError": "שגיאה בהדפסת דוח שחרור",
-  "printDischargeReportErrorMessage": "אין פגישות גסטרו עבור הביקור",
-  "printDischargeReportWarningMessage": "אתה הולך להוריד דוח שחרור עבור ביקור פעיל",
-  "printReport": "הדפס דוח",
+  "loading": "טוען",
+  "login": "כניסה",
+  "password": "סיסמה",
+  "printDischargeReport": "הדפסת מכתב שחרור",
+  "printDischargeReportError": "שגיאה בהדפסת מכתב שחרור",
+  "printDischargeReportErrorMessage": "אין רישומי גסטרו לביקור זה",
+  "printDischargeReportOrSignMessage": "אתה הולך להוריד מכתב שחרור לביקור פעיל. ניתן גם לחתום על המסמך מחדש",
+  "printDischargeReportWarningMessage": "אתה הולך להוריד מכתב שחרור לביקור פעיל",
+  "printReport": "הדפסת מכתב שחרור",
+  "resign": "חתימה מחדש",
+  "sign": "חתימה",
+  "signMessage": "חתימה על מכתב השחרור",
   "visit": "ביקור"
 }

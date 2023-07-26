@@ -29,7 +29,7 @@ const PrintDischargeReportOverflowMenuItem: React.FC<
           title={
             endVisitLabel
               ? endVisitLabel
-              : `${t("printDischargeReport", "Print Discharge Report")}`
+              : `${t("printDischargeReport", "Print Release Letter")}`
           }
           data-floating-menu-primary-focus
           onClick={openModal}
@@ -41,7 +41,7 @@ const PrintDischargeReportOverflowMenuItem: React.FC<
             {endVisitLabel ? (
               endVisitLabel
             ) : (
-              <>{t("printDischargeReport", "Print Discharge Report")}</>
+              <>{t("printDischargeReport", "Print Release Letter")}</>
             )}
           </span>
         </button>

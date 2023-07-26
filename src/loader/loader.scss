@@ -1,0 +1,19 @@
+@use '@carbon/styles/scss/spacing';
+@import '~@openmrs/esm-styleguide/src/vars';
+
+.loading {
+  display: flex;
+  background-color: $openmrs-background-grey;
+  justify-content: center;
+  min-height: spacing.$spacing-09;
+}
+
+// Overriding styles for RTL support
+html[dir='rtl'] {
+  .loading {
+    & > div:first-child {
+      margin-right: unset;
+      margin-left: .5rem;
+    }
+  }
+}

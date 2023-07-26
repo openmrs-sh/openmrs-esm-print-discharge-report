@@ -30,10 +30,10 @@ function VisitDetailOverviewPrintButton({
     <Button
       kind="ghost"
       renderIcon={(props) => <Printer size={16} {...props} />}
-      iconDescription="Print discharge report"
+      iconDescription="Print release letter"
       onClick={() => openPrintDischargeReportModal(visit)}
     >
-      {t("printDischargeReport", "Print Discharge Report")}
+      {t("printDischargeReport", "Print Release Letter")}
     </Button>
   );
 }
