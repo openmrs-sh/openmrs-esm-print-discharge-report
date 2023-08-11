@@ -1,10 +1,17 @@
 {
   "admissionId": "Admission ID",
   "cancel": "Cancel",
-  "printDischargeReport": "Print Discharge Report",
-  "printDischargeReportError": "Error print discharge report",
+  "loading": "Loading",
+  "login": "Login",
+  "password": "Password",
+  "printDischargeReport": "Print Release Letter",
+  "printDischargeReportError": "Error print release letter",
   "printDischargeReportErrorMessage": "There are no gastro encounters for the visit",
-  "printDischargeReportWarningMessage": "You are going to download discharge report for active visit",
-  "printReport": "Print Report",
+  "printDischargeReportOrSignMessage": "You are going to download release letter for active visit. Also, you can re-sign the document",
+  "printDischargeReportWarningMessage": "You are going to download release letter for active visit",
+  "printReport": "Print Release Letter",
+  "resign": "Re-Sign",
+  "sign": "Sign",
+  "signMessage": "Sign release letter",
   "visit": "Visit"
 }

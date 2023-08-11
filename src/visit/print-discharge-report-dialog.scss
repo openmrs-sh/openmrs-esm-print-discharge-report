@@ -5,3 +5,22 @@
   @include type.type-style("body-compact-02");
   color: $ui-05;
 }
+
+.modalBodyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .signContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    justify-content: center;
+    button {
+      width: 9rem;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+  
