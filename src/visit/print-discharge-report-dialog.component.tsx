@@ -36,8 +36,6 @@ const PrintDischargeReportDialog: React.FC<PrintDischargeReportDialogProps> = ({
   visit,
   closeModal,
 }) => {
-  patientUuid = "7b44d1a3-a7a9-4af1-bd2d-97ed0b59b257";
-  visit = { uuid: "78888f20-9c5e-44d0-857e-88788b83ad5e" } as any;
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
   const [isSigned, setIsSigned] = useState(false);
