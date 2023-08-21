@@ -42,4 +42,3 @@ trigger_job:
     - main
   trigger:
     project: openmrs/openmrs-simc-distro-referenceapplication
-  cache: []
