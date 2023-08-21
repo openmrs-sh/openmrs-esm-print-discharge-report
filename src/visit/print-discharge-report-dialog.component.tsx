@@ -76,9 +76,11 @@ const PrintDischargeReportDialog: React.FC<PrintDischargeReportDialogProps> = ({
               break;
             case DocumentStatus.SIGNED_REPORT_FAILED:
               showError({ message: "SIGNED_REPORT_FAILED" });
+              closeModal();
               break;
             default:
               showError({ message: "SIGNED_REPORT_FAILED" });
+              closeModal();
               break;
           }
         },
@@ -89,7 +91,7 @@ const PrintDischargeReportDialog: React.FC<PrintDischargeReportDialogProps> = ({
           } else showError(error);
         }
       ),
-    [currentVisit?.uuid, patientUuid, showError, visit?.uuid]
+    [closeModal, currentVisit?.uuid, patientUuid, showError, visit?.uuid]
   );
 
   const signDischargeLetter = useCallback(() => {
