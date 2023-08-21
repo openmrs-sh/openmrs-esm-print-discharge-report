@@ -4,14 +4,14 @@ stages:
   - package-publish
   - trigger-distro-build
 
-cache:
-  key: "Frontend-cache"
-  paths:
-    - node_modules/
-    - .yarn/cache/
-    - yarn.lock
-    - dist/
-  untracked: true
+default:
+  cache: &default_cache
+    key: "Frontend-cache"
+    paths:
+      - node_modules/
+      - .yarn/cache/
+      - yarn.lock
+      - dist/
 
 build:
   image: node:18-alpine
@@ -23,6 +23,8 @@ build:
     - yarn add semver
     - yarn up
     - yarn build
+  cache:
+    <<: *default_cache
 package-publish:
   image: node:18-alpine
   stage: package-publish
@@ -31,9 +33,13 @@ package-publish:
   script:
     - npm version --no-git-tag-version  $(node -e "console.log(require('semver').inc(require('./package.json').version, 'patch'))")-pre.$CI_PIPELINE_ID
     - yarn npm publish --tag next
+  cache:
+    <<: *default_cache
+    policy: pull
 trigger_job:
   stage: trigger-distro-build
   only:
     - main
   trigger:
     project: openmrs/openmrs-simc-distro-referenceapplication
+  cache: []
