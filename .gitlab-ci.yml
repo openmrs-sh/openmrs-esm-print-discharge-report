@@ -1,8 +1,17 @@
 image: node:18-alpine
 stages:
   - build
-  - pre-release
+  - package-publish
   - trigger-distro-build
+
+cache:
+  key: "Frontend-cache"
+  paths:
+    - node_modules/
+    - .yarn/cache/
+    - yarn.lock
+    - dist/
+  untracked: true
 
 build:
   image: node:18-alpine
@@ -10,19 +19,17 @@ build:
   tags:
     - docker-runner
   script:
-    - yarn install --immutable
-    # - yarn verify --passWithNoTests
+    - yarn install
+    - yarn add semver
+    - yarn up
     - yarn build
-pre-release:
+package-publish:
   image: node:18-alpine
-  stage: pre-release
+  stage: package-publish
   tags:
     - docker-runner
   script:
-    - yarn install --immutable
-    - yarn add semver
     - npm version --no-git-tag-version  $(node -e "console.log(require('semver').inc(require('./package.json').version, 'patch'))")-pre.$CI_PIPELINE_ID
-    - npm run build
     - yarn npm publish --tag next
 trigger_job:
   stage: trigger-distro-build
