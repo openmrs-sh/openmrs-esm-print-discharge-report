@@ -19,8 +19,8 @@ build:
   tags:
     - docker-runner
   script:
+    - yarn config set -H enableImmutableInstalls false
     - yarn install
-    - yarn add semver
     - yarn up
     - yarn build
   cache:
