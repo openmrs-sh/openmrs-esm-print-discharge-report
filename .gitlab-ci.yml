@@ -21,7 +21,6 @@ build:
   script:
     - yarn config set -H enableImmutableInstalls false
     - yarn install
-    - yarn up
     - yarn build
   cache:
     <<: *default_cache
